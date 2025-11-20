@@ -1,0 +1,266 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background: #000;
+  overflow: hidden;
+}
+
+#main {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('./assets/BG-1080x1920.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  z-index: 0;
+}
+
+#main::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 2, 109, 0.75);
+  z-index: 1;
+}
+
+/* TOP-RIGHT CLOSE BUTTON */
+/* .close-btn {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 10;
+
+  width: 32px;
+  height: 32px;
+  padding: 0;
+
+  border-radius: 50%;
+  border: none;
+  background: rgba(233, 3, 3, 0.755);
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.close-btn:active {
+  transform: scale(0.9);
+} */
+
+.imgsOne img:nth-child(1) {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+
+  opacity: 1;
+  animation: bird 5s forwards;
+}
+
+/* bird*/
+@keyframes bird {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* TRAVEL SEASON GIF */
+.imgsOne img:nth-child(2) {
+  width: 90%;
+  max-width: 400px;
+  height: auto;
+  position: absolute;
+  top: 12%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+
+  opacity: 0;
+  visibility: hidden;
+  animation: travel 1.5s forwards 2.4s;
+}
+
+@keyframes travel {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.imgsTwo img {
+  position: absolute;
+
+  z-index: 6;
+  opacity: 0;
+  scale: 0;
+  visibility: hidden;
+
+  width: 26%;
+  max-width: 120px;
+  aspect-ratio: 1 / 1;
+  height: auto;
+}
+
+.imgsTwo img:nth-child(1) {
+  top: 34%;
+  left: 6%;
+  animation: travel1 1s forwards 3.2s, card 1.8s ease-in-out infinite 4.2s;
+}
+
+.imgsTwo img:nth-child(2) {
+  top: 34%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: travel1 1.5s forwards 3.7s, card 1.8s ease-in-out infinite 5.2s;
+}
+
+.imgsTwo img:nth-child(3) {
+  top: 34%;
+  right: 6%;
+  animation: travel1 1.5s forwards 4.3s, card 1.8s ease-in-out infinite 5.8s;
+}
+
+.imgsTwo img:nth-child(4) {
+  top: 53%;
+  left: 22%;
+  animation: travel1 1.5s forwards 4.75s, card 1.8s ease-in-out infinite 6.25s;
+}
+
+.imgsTwo img:nth-child(5) {
+  top: 53%;
+  right: 22%;
+  animation: travel1 1.5s forwards 5.3s, card 1.8s ease-in-out infinite 6.8s;
+}
+
+@keyframes travel1 {
+  0% {
+    opacity: 0;
+    scale: 0;
+    visibility: hidden;
+  }
+  50% {
+    opacity: 1;
+    scale: 1.13;
+    visibility: visible;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes card {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.04;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+/* BOOK NOW */
+#bookNow {
+  position: absolute;
+  bottom: 18%;
+  left: 27.2%;
+  padding: 1rem 2.4rem;
+  border: none;
+  border-radius: 15px;
+  background-color: rgba(176, 225, 250);
+  font-size: clamp(16px, 4vw, 20px);
+  font-weight: 600;
+  z-index: 3;
+
+  opacity: 0;
+  scale: 0;
+  visibility: hidden;
+
+  animation: btn 1.4s forwards 5.7s, btn1 2s ease-in-out 5.72s infinite;
+}
+
+@keyframes btn {
+  0% {
+    opacity: 0;
+    scale: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes btn1 {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.05;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+@media (max-width: 360px) {
+  .imgsTwo img {
+    width: 28%;
+    max-width: 100px;
+  }
+
+  #bookNow {
+    bottom: 10%;
+    padding: 0.8rem 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  html,
+  body {
+    overflow: hidden;
+    height: 100%;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #main {
+    width: 420px;
+    height: 800px;
+    /* border-radius: 18px; */
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.7);
+  }
+}

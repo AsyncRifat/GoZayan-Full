@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoZayan BG</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <section id="main">
+    <!-- Top-right close button -->
+    <!-- <button id="closeAd" class="close-btn" aria-label="Close ad">✕</button> -->
+
+    <div class="imgsOne">
+      <img src="./assets/BirdGif-NoLoop.gif" alt="Bird Animation">
+      <img src="./assets/TravelSeason.gif" alt="Travel Season">
+    </div>
+
+    <div class="imgsTwo">
+      <img src="./assets/SaintMartin-704x702.png" alt="Saint Martin">
+      <img src="./assets/CoxsBazar--704x702.png" alt="Cox's Bazar">
+      <img src="./assets/Sundarbans-704x702.png" alt="Sundarbans">
+      <img src="./assets/Srilanka-704x702.png" alt="Sri Lanka">
+      <img src="./assets/Maldives-704x702.png" alt="Maldives">
+    </div>
+
+    <button id="bookNow">BOOK NOW</button>
+  </section>
+
+  <script>
+    const btn = document.getElementById('bookNow');
+    btn.addEventListener('click', () => {
+      window.location.href = 'https://gozayaan.com/';
+    });
+
+    // const ad = document.getElementById('main');
+    // const closeBtn = document.getElementById('closeAd');
+
+    // function closeAd() {
+    //   if (ad) {
+    //     ad.style.display = 'none';
+    //   }
+    // }
+
+    // const autoCloseTimer = setTimeout(closeAd, 12000);
+
+    // closeBtn.addEventListener('click', () => {
+    //   clearTimeout(autoCloseTimer);
+    //   closeAd();
+    // });
+  </script>
+</body>
+
+</html>
