@@ -16,10 +16,10 @@ body {
   position: relative;
   width: 100vw;
   height: 100vh;
-  background-image: url('./assets/BG-1080x1920.png');
+  /* background-image: url('./assets/BG-1080x1920.png');
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   overflow: hidden;
   z-index: 0;
 }
