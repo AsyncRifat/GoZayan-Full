@@ -16,10 +16,6 @@ body {
   position: relative;
   width: 100vw;
   height: 100vh;
-  /* background-image: url('./assets/BG-1080x1920.png');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat; */
   overflow: hidden;
   z-index: 0;
 }
@@ -31,35 +27,6 @@ body {
   background-color: rgba(0, 2, 109, 0.75);
   z-index: 1;
 }
-
-/* TOP-RIGHT CLOSE BUTTON */
-/* .close-btn {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  z-index: 10;
-
-  width: 32px;
-  height: 32px;
-  padding: 0;
-
-  border-radius: 50%;
-  border: none;
-  background: rgba(233, 3, 3, 0.755);
-  color: white;
-  font-size: 20px;
-  font-weight: 600;
-  cursor: pointer;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 1;
-}
-
-.close-btn:active {
-  transform: scale(0.9);
-} */
 
 .imgsOne img:nth-child(1) {
   width: 100%;
